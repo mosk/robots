@@ -389,3 +389,36 @@ template {
 [hidden] {
   display: none;
 }
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+@media (min-width: 320px) {
+  .order {
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 320px) {
+  .catalog {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .catalog__title {
+    width: 100%;
+    text-align: center;
+  }
+  .catalog__item {
+    width: 100%;
+    text-align: center;
+  }
+}

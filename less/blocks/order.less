@@ -1,6 +1,64 @@
 @media @mobile {
   .order {
-    background-color: #ffffff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid grey;
+    &__img {
+      order: -1;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    &__title {
+      width: 100%;
+      .font();
+      font-size: 24px;
+      color: #2a2a2a;
+    }
+    &__text {
+      font-size: 13px;
+      color: #2a2a2a;
+    }
+    &__description {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      dt {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        &::after {
+          content: ":";
+          position: relative;
+        }
+      }
+      dd {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &__condition {
+      .font();
+      font-size: 24px;
+      color: #b8b8b8;
+    }
+    button {
+      display: none;
+      .font();
+      font-size: 24px;
+    }
   }
 }
 

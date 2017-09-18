@@ -10,6 +10,8 @@
     -ms-flex-wrap: wrap;
     -o-flex-wrap: wrap;
     flex-wrap: wrap;
+    max-width: 706px;
+    margin: 0 auto;
     &__title {
       width: 100%;
       text-align: center;
@@ -22,7 +24,19 @@
 }
 
 @media @tablet {
+  .catalog {
+    &__item {
+      width: 50%;
+    }
+  }
 }
 
 @media @desktop {
+  .catalog {
+    &__item {
+      width: 33.33%;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+  }
 }

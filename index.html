@@ -10,11 +10,13 @@
 <body>
   <header class="header">
     <h1 class="header__title">Мои заказы</h1>
-    <div class="sort">
-      <p class="sort__text">Сортировать по:</p>
-      <span class="sort__type">по дате</span>
-      <span class="sort__type">по готовности</span>
-    </div>
+    <form class="sort">
+      <p class="sort__title">Сортировать:</p>
+      <label class="sort__text" for="sortDate">по дате</label>
+      <input class="sort__type" name="sort" type="radio" id="sortDate">
+      <label class="sort__text" for="sortCondition">по готовности</label>
+      <input class="sort__type" name="sort" type="radio" id="sortCondition">
+    </form>
   </header>
   <main>
     <section class="catalog">

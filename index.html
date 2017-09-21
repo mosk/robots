@@ -10,7 +10,7 @@
 <body>
   <header class="header">
     <h1 class="header__title">Мои заказы</h1>
-    <form class="sort">
+    <form action="" class="sort">
       <p class="sort__title">Сортировать:</p>
       <label class="sort__text" for="sortDate">по дате</label>
       <input class="sort__type" name="sort" type="radio" id="sortDate">
@@ -18,8 +18,8 @@
       <input class="sort__type" name="sort" type="radio" id="sortCondition">
     </form>
   </header>
-  <main>
-    <section class="catalog">
+  <main class="main">
+    <section class="catalog" id="catalog">
       <h2 class="catalog__title hidden">Мои заказы</h2>
       <article class="catalog__item order">
         <h3 class="order__title">Название заказа</h3>
@@ -142,8 +142,17 @@
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
     </section>
+    <a href="#catalog" class="button button--up">Наверх</a>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <form action="" class="subscribe">
+      <label class="subscribe__text subscribe__text--mail" for="subscribeMail">Ваш email:</label>
+      <input class="subscribe__mail" type="text" id="subscribeMail">
+      <input class="subscribe__check" type="checkbox" id="subscribeAgree">
+      <label class="subscribe__text subscribe__text--agree" for="subscribeAgree">Подписаться на новости</label>
+    </form>
+    <a class="button button--signup">Зарегистрироваться</a>
+  </footer>
 </body>
 
 </html>

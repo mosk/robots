@@ -1,0 +1,59 @@
+@media @mobile {
+	.subscribe {
+		margin: 0;
+		padding: 22px 11px 16px;
+		.font();
+		color: #ffffff;
+		text-align: left;
+		&__text {
+			display: inline-block;
+			position: relative;
+			margin-bottom: 11px;
+			width: auto;
+			font-size: 18px;
+			text-align: left;
+			&--agree {
+				&::before {
+					display: block;
+					content: "";
+					position: absolute;
+					right: -35px;
+					top: -4px;
+					height: 28px;
+					width: 28px;
+					background-color: transparent;
+					border: 2px solid #ffffff;
+					border-radius: 8px;
+				}
+				&::after {
+					display: none;
+					content: "";
+					position: absolute;
+					right: -39px;
+					top: 0px;
+					height: 10px;
+					width: 28px;
+					background-color: transparent;
+					border-left: 3px solid #ffffff;
+					border-bottom: 3px solid #ffffff;
+					border-radius: 1px;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		&__mail {
+			width: 100%;
+			margin-bottom: 22px;
+			padding: 9px 11px;
+			font-size: 18px;
+			border: none;
+			border-radius: 8px;
+		}
+		&__check {
+			display: none;
+		}
+	}
+	#subscribeAgree:checked + .subscribe__text--agree::after {
+		display: block;
+	}
+}

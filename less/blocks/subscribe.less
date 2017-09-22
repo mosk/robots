@@ -1,7 +1,7 @@
 @media @mobile {
 	.subscribe {
 		margin: 0;
-		padding: 22px 11px 16px;
+		padding: 22px 11px 52px;
 		.font();
 		color: #ffffff;
 		text-align: left;
@@ -55,5 +55,20 @@
 	}
 	#subscribeAgree:checked + .subscribe__text--agree::after {
 		display: block;
+	}
+}
+
+@media @desktop {
+	.subscribe {
+		margin: 0 auto;
+		max-width: 702px;
+		&__text {
+			display: inline-block;
+			font-size: 14px;
+		}
+		&__mail {
+			display: inline-block;
+			width: auto;
+		}
 	}
 }

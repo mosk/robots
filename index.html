@@ -16,6 +16,7 @@
       <input class="sort__type" name="sort" type="radio" id="sortDate">
       <label class="sort__text" for="sortCondition">по готовности</label>
       <input class="sort__type" name="sort" type="radio" id="sortCondition">
+      <input class="button button--sort" type="submit" value="Сортировать">
     </form>
   </header>
   <main class="main">
@@ -147,11 +148,11 @@
   <footer class="footer">
     <form action="" class="subscribe">
       <label class="subscribe__text subscribe__text--mail" for="subscribeMail">Ваш email:</label>
-      <input class="subscribe__mail" type="text" id="subscribeMail">
+      <input class="subscribe__mail" type="email" id="subscribeMail" required>
       <input class="subscribe__check" type="checkbox" id="subscribeAgree">
       <label class="subscribe__text subscribe__text--agree" for="subscribeAgree">Подписаться на новости</label>
+      <input class="button button--signup" type="submit" value="Зарегистрироваться">
     </form>
-    <a class="button button--signup">Зарегистрироваться</a>
   </footer>
 </body>
 

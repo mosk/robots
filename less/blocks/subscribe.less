@@ -11,6 +11,7 @@
 			margin-bottom: 11px;
 			width: auto;
 			font-size: 18px;
+			letter-spacing: 0.23px;
 			text-align: left;
 			&--agree {
 				&::before {
@@ -23,7 +24,7 @@
 					width: 28px;
 					background-color: transparent;
 					border: 2px solid #ffffff;
-					border-radius: 8px;
+					border-radius: 5px;
 				}
 				&::after {
 					display: none;
@@ -45,9 +46,11 @@
 			width: 100%;
 			margin-bottom: 22px;
 			padding: 9px 11px;
+			.font();
 			font-size: 18px;
+			letter-spacing: 0.33px;
 			border: none;
-			border-radius: 8px;
+			border-radius: 5px;
 		}
 		&__check {
 			display: none;
@@ -61,14 +64,29 @@
 @media @desktop {
 	.subscribe {
 		margin: 0 auto;
+		padding: 48px 15px 52px;
 		max-width: 702px;
 		&__text {
 			display: inline-block;
 			font-size: 14px;
+			&--agree {
+				display: block;
+				margin-left: 112px;
+				font-size: 18px;
+				&::before {
+					left: -38px;
+				}
+				&::after {
+					left: -35px;
+				}
+			}
 		}
 		&__mail {
 			display: inline-block;
-			width: auto;
+			margin-left: 15px;
+			margin-bottom: 24px;
+			padding: 9px 11px 8px;
+			width: 209px;
 		}
 	}
 }

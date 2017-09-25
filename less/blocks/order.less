@@ -45,16 +45,6 @@
       letter-spacing: 0.01em;
       color: @black;
     }
-    &__text {
-      margin: 0;
-      padding: 0;
-      font-size: 13px;
-      line-height: 1;
-      color: @black;
-      &--status {
-        margin-bottom: 17px;
-      }
-    }
     &__description {
       position: relative;
       width: 100%;
@@ -67,7 +57,6 @@
       line-height: 20px;
       text-align: left;
       dt {
-        display: inline-block;
         padding: 0;
         &::after {
           content: ":";
@@ -75,10 +64,23 @@
         }
       }
       dd {
-        display: inline-block;
         padding: 0;
         &::after {
         }
+      }
+    }
+    &__text {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      line-height: 1;
+      color: @black;
+      &--status {
+        margin-bottom: 17px;
+      }
+      &--composition {
+        display: none;
       }
     }
     &__condition {

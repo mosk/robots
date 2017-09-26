@@ -16,8 +16,10 @@ window.onload = function() {
 
   for ( i = 0; i < order.length; i++ ) {
     var text = order[i].querySelector(".order__text--date").innerHTML;
-    var date = new Date(text);
+    text = "(" + text.replace( /\./g, ")(" ) + ")";
     console.log(text);
+    console.log(text.replace);
+    var date = new Date( text.replace( $3, $2, $1) );
     console.log(date);
   }
 }

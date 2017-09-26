@@ -6,24 +6,31 @@ window.onload = function() {
 
   for (i = 0; i < orderText.length; i++) {
 
-    /* скрываем пустые описания */
+    /* скрываем пустые описания свойств заказа */
     if (orderText[i].innerHTML == "") {
       orderText[i].style.display = "none";
+      
+      /* скрываем свойства*/
       var prevText = orderText[i].previousElementSibling;
       prevText.style.display = "none";
     }
   }
 
   for (i = 0; i < order.length; i++) {
+
+    /* находим даты заказов */
     var text = order[i].querySelector(".order__text--date").innerHTML;
-    text = text.replace(/(\d+).(\d+).(\d+)/, '$2/$1/$3')
+
+    /* меняем дни с месяцами местами */
+    text = text.replace(/(\d+).(\d+).(\d+)/, '$2/$1/$3');
     console.log(text);
-    var date = new Date(text);
-    /*console.log(date[i]);
-    var order[i] = {
-      date: date;
-    }
-    */
+
+    /* создаём дату в мс */
+    var date = +(new Date(text));
+    console.log(date);
+    var dates = [];
+    dates.push(date + i);
+    console.log(dates);
   }
 }
 

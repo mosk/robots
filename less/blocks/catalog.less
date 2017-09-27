@@ -1,21 +1,12 @@
 @media @mobile {
   .catalog {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
     max-width: 702px;
     margin: 0 auto;
     padding: 0;
     padding-left: 11px;
     padding-right: 11px;
+    font-size: 0;
     &__title {
       width: 100%;
       text-align: center;
@@ -31,6 +22,7 @@
 @media @tablet {
   .catalog {
     &__item {
+      display: inline-block;
       width: 48%;
     }
   }
@@ -40,8 +32,15 @@
   .catalog {
     padding: 0;
     &__item {
+      min-height: 333px;
       width: 33.33%;
       max-width: 220px;
+      &:nth-child(3n-2) {
+        margin-left: 2.5%;
+      }
+      &:nth-child(3n) {
+        margin-left: 2.5%;
+      }
     }
   }
 }

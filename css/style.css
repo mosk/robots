@@ -519,7 +519,9 @@ a {
   .footer {
     margin-top: 45px;
     text-align: left;
-    background-color: rgba(23, 23, 23, 0.6);
+    background-color: rgba(23, 23, 23, 0);
+    background-image: url(../../img/bg--footer.png);
+    background-position: 50% 0;
   }
 }
 @media (min-width: 300px) {
@@ -877,7 +879,7 @@ a {
 @media (min-width: 300px) {
   .subscribe {
     margin: 0;
-    padding: 22px 11px 52px;
+    padding: 22px 11px 42px;
     font-family: "Prototypster Medium", Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;

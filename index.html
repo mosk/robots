@@ -9,38 +9,38 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <h1 class="header__title">Мои заказы</h1>
-    <form action="" class="sort">
+    <form action="/" class="sort">
       <p class="sort__title">Сортировать:</p>
-      <label class="sort__text" for="sortDate">по дате</label>
       <input class="sort__type" name="sort" type="radio" id="sortDate">
-      <label class="sort__text" for="sortCondition">по готовности</label>
+      <label class="sort__text sort__date" for="sortDate">по дате</label>
       <input class="sort__type" name="sort" type="radio" id="sortCondition">
+      <label class="sort__text sort__condition" for="sortCondition">по готовности</label>
       <input class="button button--sort" type="submit" value="Сортировать">
     </form>
   </header>
   <main class="main">
-    <section class="catalog" id="catalog">
+    <section class="catalog">
       <h2 class="catalog__title hidden">Мои заказы</h2>
       <article class="catalog__item order">
         <h3 class="order__title">Название заказа</h3>
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">в печати</dd><br>
+          <dd class="order__text">в печати</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">11.04.13</dd><br>
+          <dd class="order__text order__text--date">11.04.13</dd>
           <dt class="order__text order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text"></dd><br>
+          <dd class="order__text"></dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text"></dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">10%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
       <article class="catalog__item order">
@@ -48,19 +48,19 @@
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">отправлен</dd><br>
+          <dd class="order__text">отправлен</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">12.04.13</dd><br>
+          <dd class="order__text order__text--date">12.04.13</dd>
           <dt class="order__text order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text">чёрный</dd><br>
+          <dd class="order__text">чёрный</dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text">160 x 70</dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">20%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
       <article class="catalog__item order favorite">
@@ -68,19 +68,19 @@
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">в Моем Магазине</dd><br>
+          <dd class="order__text">в Моем Магазине</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">13.04.13</dd><br>
+          <dd class="order__text order__text--date">13.04.13</dd>
           <dt class="order__text order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text"></dd><br>
+          <dd class="order__text"></dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text"></dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">33%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
       <article class="catalog__item order">
@@ -88,19 +88,19 @@
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">в печати</dd><br>
+          <dd class="order__text">в печати</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">14.04.13</dd><br>
+          <dd class="order__text order__text--date">14.04.13</dd>
           <dt class="order__text order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text"></dd><br>
+          <dd class="order__text"></dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text"></dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">1%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
       <article class="catalog__item order">
@@ -108,19 +108,19 @@
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">в печати</dd><br>
+          <dd class="order__text">в печати</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">15.04.13</dd><br>
+          <dd class="order__text order__text--date">15.04.13</dd>
           <dt class="order__tex order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text"></dd><br>
+          <dd class="order__text"></dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text"></dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">99%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
       <article class="catalog__item order">
@@ -128,26 +128,26 @@
         <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
         <dl class="order__description">
           <dt class="order__text order__text--status">Статус</dt>
-          <dd class="order__text">отправлен</dd><br>
+          <dd class="order__text">отправлен</dd>
           <dt class="order__text">Загружен</dt>
-          <dd class="order__text order__text--date">13.04.79</dd><br>
+          <dd class="order__text order__text--date">13.04.79</dd>
           <dt class="order__text order__text--composition">Состав</dt>
-          <dd class="order__text">Фотополимер покрашенный</dd><br>
+          <dd class="order__text">Фотополимер покрашенный</dd>
           <dt class="order__text">Количество экземпляров</dt>
-          <dd class="order__text">1</dd><br>
+          <dd class="order__text">1</dd>
           <dt class="order__text">Цвет</dt>
-          <dd class="order__text">чёрный</dd><br>
+          <dd class="order__text">чёрный</dd>
           <dt class="order__text">Размер</dt>
           <dd class="order__text">160 x 70</dd>
         </dl>
-        <p class="order__condition">Выполнен на <span class="progress">60%</span></p>
+        <p class="order__condition">Выполнен на <span class="progress">47%</span></p>
         <button class="button order__button">+ Добавить в магазин</button>
       </article>
     </section>
-    <a href="#catalog" class="button button--up">Наверх</a>
+    <a href="#header" class="button button--up">Наверх</a>
   </main>
   <footer class="footer">
-    <form action="" class="subscribe">
+    <form action="/" class="subscribe">
       <label class="subscribe__text subscribe__text--mail" for="subscribeMail">Ваш email:</label>
       <input class="subscribe__mail" type="email" id="subscribeMail" required placeholder="dedal79@gmail.com">
       <input class="subscribe__check" type="checkbox" id="subscribeAgree">

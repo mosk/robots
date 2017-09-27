@@ -20,6 +20,7 @@
       text-align: center;
     }
     &__text {
+      position: relative;
       display: inline-block;
       margin: 0;
       padding: 10px 15px 11px;
@@ -30,8 +31,36 @@
       background-color: @orange;
       border: none;
       border-radius: 4px;
-      &:nth-child(n+3) {
+      &:nth-child(n+4) {
         margin-left: 2%;
+      }
+      &--up {
+        &::after {
+          display: inline-block;
+          position: absolute;
+          content: "▼";
+          top: 50%;
+          right: 5px;
+          background-color: transparent;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+      &--down {
+        &::after {
+          display: inline-block;
+          position: absolute;
+          content: "▼";
+          top: 50%;
+          right: 5px;
+          background-color: transparent;
+          -webkit-transform: translateY(-50%) rotate(180deg);
+          -ms-transform: translateY(-50%) rotate(180deg);
+          -o-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
     }
     &__type {
@@ -70,11 +99,15 @@
       padding: 0;
       color: @orange;
       background-color: transparent;
-      background-image: linear-gradient(to right, @orange 55%, transparent 45%);
+      text-decoration: none;
+      background-image: -webkit-linear-gradient(left, #ff6633 55%, transparent 45%);
+      background-image: -o-linear-gradient(left, #ff6633 55%, transparent 45%);
+      background-image: linear-gradient(to right, #ff6633 55%, transparent 45%);
       background-position: bottom;
       background-size: 8px 1px;
       background-repeat: repeat-x;
-      &:nth-child(n+3) {
+      cursor: pointer;
+      &:nth-child(n+4) {
         margin-left: 7px;
         &::before {
           display: block;
@@ -89,6 +122,30 @@
           -ms-transform: translateY(-50%);
           -o-transform: translateY(-50%);
           transform: translateY(-50%);
+        }
+      }
+      &--up {
+        &::after {
+          position: relative;
+          left: 0;
+          top: 0;
+          padding-left: 5px;
+          -webkit-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
+          transform: none;
+        }
+      }
+      &--down {
+        &::after {
+          position: relative;
+          left: 0;
+          top: 0;
+          padding-right: 5px;
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
         }
       }
     }

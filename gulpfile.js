@@ -49,12 +49,22 @@ gulp.task("ie", function() {
     gulp.src("css/style.css")
         .pipe(postcss([unwrapAtMedia]))
         .pipe(rename("style--ie.css"))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('css'));
+});
+
+gulp.task("ie-minify", function() {
+    gulp.src("css/style-ie.css")
         .pipe(minify())
         .pipe(rename("style--ie.min.css"))
         .pipe(gulp.dest("css"));
 });
 
-gulp.task("build", function(fn) {
-    run("style", "ie", fn)
-})
+gulp.task("ie-all", function() {
+    gulp.src("css/style-ie.css")
+        .pipe(postcss([unwrapAtMedia]))
+        .pipe(rename("style--ie.css"))
+        .pipe(gulp.dest('css'))
+        .pipe(minify())
+        .pipe(rename("style--ie.min.css"))
+        .pipe(gulp.dest("css"));
+});

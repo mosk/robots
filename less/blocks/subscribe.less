@@ -22,23 +22,19 @@
 					top: -4px;
 					height: 28px;
 					width: 28px;
-					background-color: transparent;
-					border: 2px solid #ffffff;
-					border-radius: 5px;
+          background-image: url(../img/checkbox__border.png);
+          background-repeat: no-repeat;
 				}
 				&:after {
 					display: none;
 					content: "";
 					position: absolute;
-					right: -39px;
-					top: 0px;
-					height: 10px;
-					width: 28px;
-					background-color: transparent;
-					border-left: 3px solid #ffffff;
-					border-bottom: 3px solid #ffffff;
-					border-radius: 1px;
-					transform: rotate(-45deg);
+					right: -42px;
+					top: 3px;
+					height: 29px;
+					width: 29px;
+          background-image: url(../img/checkbox__accept.png);
+          background-repeat: no-repeat;
 				}
 				&::before {
 					display: block;
@@ -46,25 +42,21 @@
 					position: absolute;
 					right: -35px;
 					top: -4px;
-					height: 28px;
-					width: 28px;
-					background-color: transparent;
-					border: 2px solid #ffffff;
-					border-radius: 5px;
+					height: 29px;
+					width: 29px;
+          background-image: url(../img/checkbox__border.png);
+          background-repeat: no-repeat;
 				}
 				&::after {
 					display: none;
 					content: "";
 					position: absolute;
-					right: -39px;
-					top: 0px;
-					height: 10px;
-					width: 28px;
-					background-color: transparent;
-					border-left: 3px solid #ffffff;
-					border-bottom: 3px solid #ffffff;
-					border-radius: 1px;
-					transform: rotate(-45deg);
+					right: -42px;
+					top: 3px;
+          height: 29px;
+          width: 29px;
+          background-image: url(../img/checkbox__accept.png);
+          background-repeat: no-repeat;
 				}
 			}
 		}
@@ -82,9 +74,12 @@
 			display: none;
 		}
 	}
-	#subscribeAgree:checked + .subscribe__text--agree::after {
+	#subscribeAgree:checked + .subscribe__text--agree:after {
 		display: block;
 	}
+  #subscribeAgree:checked + .subscribe__text--agree::after {
+    display: block;
+  }
 }
 
 @media @desktop {
@@ -103,13 +98,13 @@
 					left: -38px;
 				}
 				&:after {
-					left: -35px;
+					left: -31px;
 				}
 				&::before {
 					left: -38px;
 				}
 				&::after {
-					left: -35px;
+					left: -31px;
 				}
 			}
 		}

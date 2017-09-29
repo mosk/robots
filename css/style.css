@@ -622,13 +622,13 @@ a {
     order: -1;
     width: 100%;
     margin: 0;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     padding: 0;
   }
   .order__title {
     width: 100%;
     margin: 0;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     padding: 0;
     padding-left: 6px;
     padding-right: 6px;
@@ -645,7 +645,7 @@ a {
     position: relative;
     width: 100%;
     margin: 0;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
     padding: 0;
     padding-left: 6px;
     padding-right: 6px;
@@ -656,15 +656,30 @@ a {
   .order__description dt {
     padding: 0;
   }
+  .order__description dt:after {
+    content: ":";
+    position: relative;
+    display: inline;
+    vertical-align: top;
+  }
   .order__description dt::after {
     content: ":";
     position: relative;
+    display: inline;
+    vertical-align: top;
   }
   .order__description dd {
     padding: 0;
   }
+  .order__description dd:after {
+    content: "\000A";
+    display: block;
+    white-space: pre;
+    font-size: 0;
+  }
   .order__description dd::after {
-    content: "\A";
+    content: "\000A";
+    display: block;
     white-space: pre;
     font-size: 0;
   }
@@ -672,12 +687,14 @@ a {
     display: inline;
     margin: 0;
     padding: 0;
+    vertical-align: top;
     font-size: 13px;
     line-height: 1;
     color: #2a2a2a;
   }
   .order__text--status {
-    margin-bottom: 17px;
+    display: inline-block;
+    margin-bottom: 21px;
   }
   .order__text--composition {
     display: none;
@@ -734,6 +751,33 @@ a {
     font-size: 18px;
     letter-spacing: 0.23px;
     text-align: left;
+  }
+  .subscribe__text--agree:before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -35px;
+    top: -4px;
+    height: 28px;
+    width: 28px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+  }
+  .subscribe__text--agree:after {
+    display: none;
+    content: "";
+    position: absolute;
+    right: -39px;
+    top: 0px;
+    height: 10px;
+    width: 28px;
+    background-color: transparent;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    border-radius: 1px;
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   .subscribe__text--agree::before {
     display: block;
@@ -914,6 +958,16 @@ a {
     border: none;
     border-radius: 0;
   }
+  .order:hover > .order__button:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ff6633;
+  }
   .order:hover > .order__button::after {
     display: block;
     content: "";
@@ -937,6 +991,12 @@ a {
     display: block;
     margin-left: 112px;
     font-size: 18px;
+  }
+  .subscribe__text--agree:before {
+    left: -38px;
+  }
+  .subscribe__text--agree:after {
+    left: -35px;
   }
   .subscribe__text--agree::before {
     left: -38px;

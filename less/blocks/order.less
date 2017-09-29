@@ -30,13 +30,13 @@
       order: -1;
       width: 100%;
       margin: 0;
-      margin-bottom: 11px;
+      margin-bottom: 15px;
       padding: 0;
     }
     &__title {
       width: 100%;
       margin: 0;
-      margin-bottom: 2px;
+      margin-bottom: 5px;
       padding: 0;
       padding-left: 6px;
       padding-right: 6px;
@@ -51,7 +51,7 @@
       position: relative;
       width: 100%;
       margin: 0;
-      margin-bottom: 22px;
+      margin-bottom: 19px;
       padding: 0;
       padding-left: 6px;
       padding-right: 6px;
@@ -60,15 +60,30 @@
       text-align: left;
       dt {
         padding: 0;
+        &:after {
+          content: ":";
+          position: relative;
+          display: inline;
+          vertical-align: top;
+        }
         &::after {
           content: ":";
           position: relative;
+          display: inline;
+          vertical-align: top;
         }
       }
       dd {
         padding: 0;
+        &:after {
+          content: "\000A";
+          display: block;
+          white-space: pre;
+          font-size: 0;
+        }
         &::after {
-          content: "\A";
+          content: "\000A";
+          display: block;
           white-space: pre;
           font-size: 0;
         }
@@ -78,11 +93,13 @@
       display: inline;
       margin: 0;
       padding: 0;
+      vertical-align: top;
       font-size: 13px;
       line-height: 1;
       color: @black;
       &--status {
-        margin-bottom: 17px;
+        display: inline-block;
+        margin-bottom: 21px;
       }
       &--composition {
         display: none;
@@ -174,6 +191,16 @@
     width: fit-content;
     border: none;
     border-radius: 0;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: @orange;
+    }
     &::after {
       display: block;
       content: "";

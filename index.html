@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css">
     <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/selectivizr.min.js"></script><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/style--ie.min.css" type="text/css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/style-ie.min.css" type="text/css" /><![endif]-->
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                 <p class="order__condition">Выполнен на <span class="progress">20%</span></p>
                 <button class="button order__button">+ Добавить в магазин</button>
             </article>
-            <article class="catalog__item order favorite">
+            <article class="catalog__item catalog__item--favorite order">
                 <h3 class="order__title">Название заказа</h3>
                 <div class="order__img"><img src="img/robot.png" alt="Фото товара" width="206" height="180"></div>
                 <dl class="order__description">
@@ -152,7 +152,7 @@
     <footer class="footer">
         <form action="/" class="subscribe">
             <label class="subscribe__text subscribe__text--mail" for="subscribeMail">Ваш email:</label>
-            <input class="subscribe__mail" type="email" id="subscribeMail" required placeholder="dedal79@gmail.com">
+            <input class="subscribe__mail" type="email" id="subscribeMail" required placeholder="dedal79@gmail.com"><br>
             <input class="subscribe__check" type="checkbox" id="subscribeAgree">
             <label class="subscribe__text subscribe__text--agree" for="subscribeAgree">Подписаться на новости</label>
             <input class="button button--signup" type="submit" value="Зарегистрироваться">

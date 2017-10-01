@@ -396,7 +396,7 @@ template {
 }
 @font-face {
   font-family: "Prototypster Medium";
-  src: url('../fonts/PrototypsterMedium-webfont.woff') format('woff'), url('../fonts/PrototypsterMedium-webfont.ttf') format('truetype'), url('../fonts/PrototypsterMedium-webfont.svg') format('svg'), url('../fonts/PrototypsterMedium-webfont.eot') format('eot');
+  src: url('../fonts/PrototypsterMedium-webfont.eot?') format('embedded-opentype'), url('../fonts/PrototypsterMedium-webfont.woff') format('woff'), url('../fonts/PrototypsterMedium-webfont.ttf') format('truetype'), url('../fonts/PrototypsterMedium-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -588,9 +588,22 @@ a {
     text-align: center;
   }
   .catalog__item {
+    position: relative;
     width: 100%;
     margin-bottom: 47px;
     text-align: center;
+  }
+  .catalog__item--favorite::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    height: 55px;
+    width: 35px;
+    background-image: url("../img/sprite.png");
+    background-position: -5px -68px;
+    background-repeat: no-repeat;
   }
   .order {
     display: inline-block;
@@ -752,7 +765,7 @@ a {
     letter-spacing: 0.23px;
     text-align: left;
   }
-  .subscribe__text--agree:before {
+  .subscribe__text--agree::before {
     display: block;
     content: "";
     position: absolute;
@@ -760,40 +773,20 @@ a {
     top: -4px;
     height: 28px;
     width: 28px;
-    background-image: url(../img/checkbox__border.png);
-    background-repeat: no-repeat;
-  }
-  .subscribe__text--agree:after {
-    display: none;
-    content: "";
-    position: absolute;
-    right: -42px;
-    top: 3px;
-    height: 29px;
-    width: 29px;
-    background-image: url(../img/checkbox__accept.png);
-    background-repeat: no-repeat;
-  }
-  .subscribe__text--agree::before {
-    display: block;
-    content: "";
-    position: absolute;
-    right: -35px;
-    top: -4px;
-    height: 29px;
-    width: 29px;
-    background-image: url(../img/checkbox__border.png);
+    background-image: url(../img/sprite.png);
+    background-position: -5px -30px;
     background-repeat: no-repeat;
   }
   .subscribe__text--agree::after {
     display: none;
     content: "";
     position: absolute;
-    right: -42px;
+    right: -28px;
     top: 3px;
-    height: 29px;
-    width: 29px;
-    background-image: url(../img/checkbox__accept.png);
+    height: 15px;
+    width: 15px;
+    background-image: url(../img/sprite.png);
+    background-position: -5px -5px;
     background-repeat: no-repeat;
   }
   .subscribe__mail {
@@ -810,9 +803,6 @@ a {
   }
   .subscribe__check {
     display: none;
-  }
-  #subscribeAgree:checked + .subscribe__text--agree:after {
-    display: block;
   }
   #subscribeAgree:checked + .subscribe__text--agree::after {
     display: block;
@@ -984,12 +974,6 @@ a {
     display: block;
     margin-left: 112px;
     font-size: 18px;
-  }
-  .subscribe__text--agree:before {
-    left: -38px;
-  }
-  .subscribe__text--agree:after {
-    left: -31px;
   }
   .subscribe__text--agree::before {
     left: -38px;

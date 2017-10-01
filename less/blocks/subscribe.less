@@ -1,119 +1,90 @@
 @media @mobile {
-	.subscribe {
-		margin: 0;
-		padding: 22px 11px 39px;
-		.font();
-		color: #ffffff;
-		text-align: left;
-		&__text {
-			display: inline-block;
-			position: relative;
-			margin-bottom: 11px;
-			width: auto;
-			font-size: 18px;
-			letter-spacing: 0.23px;
-			text-align: left;
-			&--agree {
-				&:before {
-					display: block;
-					content: "";
-					position: absolute;
-					right: -35px;
-					top: -4px;
-					height: 28px;
-					width: 28px;
-          background-image: url(../img/checkbox__border.png);
-          background-repeat: no-repeat;
-				}
-				&:after {
-					display: none;
-					content: "";
-					position: absolute;
-					right: -42px;
-					top: 3px;
-					height: 29px;
-					width: 29px;
-          background-image: url(../img/checkbox__accept.png);
-          background-repeat: no-repeat;
-				}
-				&::before {
-					display: block;
-					content: "";
-					position: absolute;
-					right: -35px;
-					top: -4px;
-					height: 29px;
-					width: 29px;
-          background-image: url(../img/checkbox__border.png);
-          background-repeat: no-repeat;
-				}
-				&::after {
-					display: none;
-					content: "";
-					position: absolute;
-					right: -42px;
-					top: 3px;
-          height: 29px;
-          width: 29px;
-          background-image: url(../img/checkbox__accept.png);
-          background-repeat: no-repeat;
-				}
-			}
-		}
-		&__mail {
-			width: 100%;
-			margin-bottom: 22px;
-			padding: 9px 11px;
-			.font();
-			font-size: 18px;
-			letter-spacing: 0.33px;
-			border: none;
-			border-radius: 5px;
-		}
-		&__check {
-			display: none;
-		}
-	}
-	#subscribeAgree:checked + .subscribe__text--agree:after {
-		display: block;
-	}
-  #subscribeAgree:checked + .subscribe__text--agree::after {
-    display: block;
-  }
+    .subscribe {
+        margin: 0;
+        padding: 22px 11px 39px;
+        .font();
+        color: #ffffff;
+        text-align: left;
+        &__text {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 11px;
+            width: auto;
+            font-size: 18px;
+            letter-spacing: 0.23px;
+            text-align: left;
+            &--agree {
+                &::before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    right: -35px;
+                    top: -4px;
+                    height: 28px;
+                    width: 28px;
+                    background-image: url(../img/sprite.png);
+                    background-position: -5px -30px;
+                    background-repeat: no-repeat;
+                }
+                &::after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    right: -28px;
+                    top: 3px;
+                    height: 15px;
+                    width: 15px;
+                    background-image: url(../img/sprite.png);
+                    background-position: -5px -5px;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &__mail {
+            width: 100%;
+            margin-bottom: 22px;
+            padding: 9px 11px;
+            .font();
+            font-size: 18px;
+            letter-spacing: 0.33px;
+            border: none;
+            border-radius: 5px;
+        }
+        &__check {
+            display: none;
+        }
+    }
+    #subscribeAgree:checked+.subscribe__text--agree::after {
+        display: block;
+    }
 }
 
 @media @desktop {
-	.subscribe {
-		margin: 0 auto;
-		padding: 48px 15px 50px;
-		max-width: 702px;
-		&__text {
-			display: inline-block;
-			font-size: 14px;
-			&--agree {
-				display: block;
-				margin-left: 112px;
-				font-size: 18px;
-				&:before {
-					left: -38px;
-				}
-				&:after {
-					left: -31px;
-				}
-				&::before {
-					left: -38px;
-				}
-				&::after {
-					left: -31px;
-				}
-			}
-		}
-		&__mail {
-			display: inline-block;
-			margin-left: 15px;
-			margin-bottom: 24px;
-			padding: 9px 11px 8px;
-			width: 209px;
-		}
-	}
+    .subscribe {
+        margin: 0 auto;
+        padding: 48px 15px 50px;
+        max-width: 702px;
+        &__text {
+            display: inline-block;
+            font-size: 14px;
+            &--agree {
+                display: block;
+                margin-left: 112px;
+                font-size: 18px;
+                &::before {
+                    left: -38px;
+                }
+                &::after {
+                    left: -31px;
+                }
+            }
+        }
+        &__mail {
+            display: inline-block;
+            margin-left: 15px;
+            margin-bottom: 24px;
+            padding: 9px 11px 8px;
+            width: 209px;
+        }
+    }
 }

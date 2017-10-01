@@ -16,8 +16,7 @@
     "build": "gulp style",
     "start": "gulp serve",
     "ie": "gulp ie",
-    "ie-minify": "gulp ie-minify",
-    "ie-all": "gulp ie-all"
+    "ie-minify": "gulp ie-minify"
   },
   "editorconfig-cli": [
     "*.html",

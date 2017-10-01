@@ -10,6 +10,7 @@ var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var unwrapAtMedia = require("postcss-unwrap-at-media");
+var spritesmith = require('gulp.spritesmith');
 
 gulp.task("style", function() {
     gulp.src("less/style.less")
@@ -48,23 +49,13 @@ gulp.task("serve", ["style"], function() {
 gulp.task("ie", function() {
     gulp.src("css/style.css")
         .pipe(postcss([unwrapAtMedia]))
-        .pipe(rename("style--ie.css"))
+        .pipe(rename("style-ie.css"))
         .pipe(gulp.dest('css'));
 });
 
 gulp.task("ie-minify", function() {
     gulp.src("css/style-ie.css")
         .pipe(minify())
-        .pipe(rename("style--ie.min.css"))
-        .pipe(gulp.dest("css"));
-});
-
-gulp.task("ie-all", function() {
-    gulp.src("css/style-ie.css")
-        .pipe(postcss([unwrapAtMedia]))
-        .pipe(rename("style--ie.css"))
-        .pipe(gulp.dest('css'))
-        .pipe(minify())
-        .pipe(rename("style--ie.min.css"))
+        .pipe(rename("style-ie.min.css"))
         .pipe(gulp.dest("css"));
 });
